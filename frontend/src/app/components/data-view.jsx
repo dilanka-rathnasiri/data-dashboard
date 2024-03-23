@@ -7,7 +7,7 @@ export function DataView() {
     <div>
       <table className="table table-bordered border-secondary">
         <thead>
-          <tr className="table-info">
+          <tr className="table-success">
             {headers.map((i) => (
               <th scope="col" key={i}>
                 {i}
