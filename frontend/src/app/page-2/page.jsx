@@ -1,10 +1,10 @@
-import { NavBar } from "@/app/components/nav-bar";
+import { DataView } from "@/app/components/data-view";
+import getData from "@/app/resources/data-2";
 
 export default function Page() {
   return (
     <div>
-      <NavBar />
-      <h1>This is page 2!</h1>
+      <DataView data={getData()} />
     </div>
   );
 }

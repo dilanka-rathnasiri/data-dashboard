@@ -1,7 +1,7 @@
-import { getTableData } from "@/app/services/data-services";
+import getTableData from "@/app/services/data-services";
 
-export function DataView() {
-  const { headers, rows } = getTableData();
+export function DataView({ data }) {
+  const { headers, rows } = getTableData(data);
 
   return (
     <div>

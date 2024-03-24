@@ -1,15 +1,15 @@
-import {getData} from "@/app/resources/data"
-export function getTableData(){
-    const data = getData()
-    const headers = Object.keys(data[0])
-    let rows = [];
+import { getData } from "@/app/resources/data-1";
 
-    for (let i=0; i<data.length;i++) {
-        rows.push(Object.values(data[i]))
-    }
+export default function getTableData(data) {
+  const headers = Object.keys(data[0]);
+  let rows = [];
 
-    return {
-        "headers": headers,
-        "rows": rows
-    }
+  for (let i = 0; i < data.length; i++) {
+    rows.push(Object.values(data[i]));
+  }
+
+  return {
+    headers: headers,
+    rows: rows,
+  };
 }
