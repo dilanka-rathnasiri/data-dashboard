@@ -1,7 +1,10 @@
+import { DataView } from "@/app/components/data-view";
+import getData from "@/app/resources/data-1";
+
 export default function Page() {
   return (
     <div>
-      <h1>This is page 1!</h1>
+      <DataView data={getData()} />
     </div>
   );
 }
