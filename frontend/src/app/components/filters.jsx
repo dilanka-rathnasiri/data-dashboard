@@ -1,8 +1,4 @@
 export default function Filters({ filterValues, filterSetters }) {
-  function search() {
-    console.log(filterValues);
-  }
-
   return (
     <div className="d-flex flex-row m-2">
       <div className="d-flex flex-grow-1 justify-content-start">
