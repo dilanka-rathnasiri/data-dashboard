@@ -5,7 +5,7 @@ export default function getData() {
       id: "4edc8981-b644-4b36-9467-892ad4280aec",
       name: "Ivane Saad",
       address: "Legend St 2279, Sublimity, Nigeria, 947129",
-      birthDate: "29.03.1991",
+      birthdate: "29.03.1991",
       email: "marquise_sandlinun@shut.xou",
     },
     {
@@ -13,7 +13,7 @@ export default function getData() {
       id: "b9f767a1-c3b9-4636-9368-349a07a5b633",
       name: "Trung Kraemer",
       address: "Guy Street 2452, Montreal, Mauritius, 389242",
-      birthDate: "15.08.2012",
+      birthdate: "15.08.2012",
       email: "nikkia_comerforda3hy@room.us",
     },
     {
@@ -21,7 +21,7 @@ export default function getData() {
       id: "c5a9b658-fef3-40a8-baa6-d2f19f501b0b",
       name: "Ara Janssen",
       address: "Rock Street 4833, East Princeton, North Macedonia, 020329",
-      birthDate: "28.01.1976",
+      birthdate: "28.01.1976",
       email: "faviola_fennerrhzm@admin.wzc",
     },
     {
@@ -29,7 +29,7 @@ export default function getData() {
       id: "3b46a5a8-8d6d-47dd-bd96-c6b2b1b0e2db",
       name: "Stefany Fink",
       address: "English St 7357, Mount Isa, Cuba, 799434",
-      birthDate: "05.12.1992",
+      birthdate: "05.12.1992",
       email: "caridad_lomanldx@grown.miz",
     },
     {
@@ -37,7 +37,7 @@ export default function getData() {
       id: "62e58fe9-d34b-4b46-bb29-654c9942183c",
       name: "Felix Likens",
       address: "Transaction Street 517, Maplecrest, Wallis And Futuna, 317686",
-      birthDate: "20.01.1993",
+      birthdate: "20.01.1993",
       email: "bashar_hazeltonjw6x@none.eu",
     },
     {
@@ -45,7 +45,7 @@ export default function getData() {
       id: "2b56eab0-ed39-493d-9266-3532a7132220",
       name: "Sharayah Holdsworth",
       address: "Albums Street 7704, Fort Ritner, Montenegro, 062333",
-      birthDate: "29.07.2020",
+      birthdate: "29.07.2020",
       email: "shahana_mangino3p@involving.kp",
     },
     {
@@ -53,7 +53,7 @@ export default function getData() {
       id: "b973c9d8-5aed-470a-9c48-3d8b8ee36b1c",
       name: "Dornell Robinson",
       address: "Mission St 2243, Varnell, Serbia, 382103",
-      birthDate: "29.06.1973",
+      birthdate: "29.06.1973",
       email: "carisa_haffnerco@sitting.dn",
     },
     {
@@ -61,7 +61,7 @@ export default function getData() {
       id: "3b5b4081-9a6c-4b77-89d7-74e6fe0395fc",
       name: "Amir Coniglio",
       address: "Pottery St 5150, Duplessis, Qatar, 281294",
-      birthDate: "05.06.1978",
+      birthdate: "05.06.1978",
       email: "pasha_newcombm@fault.hve",
     },
     {
@@ -69,7 +69,7 @@ export default function getData() {
       id: "54412299-cf32-41e6-8a3c-b33cdd191e4b",
       name: "Mamie Mccaleb",
       address: "Patch Street 6795, Crested Butte, Costa Rica, 932968",
-      birthDate: "20.01.1991",
+      birthdate: "20.01.1991",
       email: "jory_vavrahzha@offshore.ry",
     },
     {
@@ -77,7 +77,7 @@ export default function getData() {
       id: "e35d09ef-fa42-48c0-909d-d2c91b1a7500",
       name: "Mariah Mattis",
       address: "Forward St 5438, Kylertown, Mongolia, 201864",
-      birthDate: "28.03.1976",
+      birthdate: "28.03.1976",
       email: "amika_cheeksn7@stop.hmv",
     },
   ];

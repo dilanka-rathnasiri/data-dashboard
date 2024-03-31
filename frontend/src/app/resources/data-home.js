@@ -5,7 +5,7 @@ export default function getData() {
       id: "a181d105-223a-4308-b173-77206c6cfe7d",
       name: "Roddrick Jeffcoat",
       address: "Creation Road 2949, Wadmalaw Island, Iceland, 539651",
-      birthDate: "01.01.1983",
+      birthdate: "01.01.1983",
       email: "labrian_orrisapn@exclusion.tg",
     },
     {
@@ -13,7 +13,7 @@ export default function getData() {
       id: "02bee0af-838e-4944-9557-7d9e477e0323",
       name: "Tamira Forcier",
       address: "Intense Road 5706, Hazlet, Guam, 337416",
-      birthDate: "01.12.2005",
+      birthdate: "01.12.2005",
       email: "micaella_cardinalegm@pest.xz",
     },
     {
@@ -21,7 +21,7 @@ export default function getData() {
       id: "aefbadb9-f76e-47a1-911f-b119e069d11b",
       name: "Lynard Macmillan",
       address: "Soul Road 8371, Holt, So Tom And Prncipe, 273047",
-      birthDate: "16.09.2002",
+      birthdate: "16.09.2002",
       email: "angelika_harlownjq@philadelphia.mum",
     },
     {
@@ -29,7 +29,7 @@ export default function getData() {
       id: "e60406db-f398-45b7-b243-03bf6361424b",
       name: "Wilton Towles",
       address: "Circumstances Street 592, Osmond, Macao, 238019",
-      birthDate: "16.09.1987",
+      birthdate: "16.09.1987",
       email: "jazman_brumbaughku@economics.klu",
     },
     {
@@ -37,7 +37,7 @@ export default function getData() {
       id: "714fc65b-a9bc-4075-bb07-74466d8620d7",
       name: "Sonia Hollen",
       address: "Analyst St 137, Fort Yates, Costa Rica, 408850",
-      birthDate: "05.04.1977",
+      birthdate: "05.04.1977",
       email: "enzo_maillouxae@meyer.axl",
     },
     {
@@ -45,7 +45,7 @@ export default function getData() {
       id: "a4635508-568a-45ca-9174-f51fa398639c",
       name: "Parnell Souders",
       address: "Assessment Road 5752, Hollenberg, Syria, 668041",
-      birthDate: "23.05.1975",
+      birthdate: "23.05.1975",
       email: "leighanne_christianok@wildlife.ek",
     },
     {
@@ -53,7 +53,7 @@ export default function getData() {
       id: "1dcb0768-68be-4113-83ce-db6c18a0f7bf",
       name: "Valencia Santana",
       address: "Printing St 9137, Erving, Malawi, 278350",
-      birthDate: "24.08.1979",
+      birthdate: "24.08.1979",
       email: "treg_wilhitevzz@athletics.efj",
     },
     {
@@ -61,7 +61,7 @@ export default function getData() {
       id: "f221bc69-392b-4e27-b9a5-c0729cab3dac",
       name: "Lateefah Lampman",
       address: "Tunnel St 9271, Blairstown, Ghana, 685043",
-      birthDate: "23.07.1975",
+      birthdate: "23.07.1975",
       email: "marlys_muffl@particularly.ln",
     },
     {
@@ -69,7 +69,7 @@ export default function getData() {
       id: "c5f611eb-3730-40e9-b4e1-a736ddb7f00e",
       name: "Carola Candler",
       address: "Overseas Road 668, Komaki, Latvia, 816480",
-      birthDate: "07.11.2002",
+      birthdate: "07.11.2002",
       email: "acey_garciab@bond.fe",
     },
     {
@@ -77,7 +77,7 @@ export default function getData() {
       id: "6828908e-9dd8-468c-bccf-3e98fe0a0645",
       name: "Velicia Hamblen",
       address: "Stockholm Road 632, Hackettstown, Slovakia, 036964",
-      birthDate: "22.05.1972",
+      birthdate: "22.05.1972",
       email: "sahira_uribebqus@card.kr",
     },
   ];
