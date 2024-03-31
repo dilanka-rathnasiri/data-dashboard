@@ -6,11 +6,11 @@ export default function getTableData(data, filter) {
 
   for (let i = 0; i < data.length; i++) {
     if (
-      (filter.id === "" || data[i].id === filter.id) &&
-      (filter.name === "" || data[i].name === filter.name) &&
-      (filter.address === "" || data[i].address === filter.address) &&
-      (filter.birthdate === "" || data[i].birthdate === filter.birthdate) &&
-      (filter.email === "" || data[i].email === filter.email)
+      data[i].id.startsWith(filter.id) &&
+      data[i].name.startsWith(filter.name) &&
+      data[i].address.startsWith(filter.address) &&
+      data[i].birthdate.startsWith(filter.birthdate) &&
+      data[i].email.startsWith(filter.email)
     ) {
       rows.push(Object.values(data[i]));
     }
