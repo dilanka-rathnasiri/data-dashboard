@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 function activeStyle(path) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const currentPath = usePathname();
 
   if (currentPath === path) {

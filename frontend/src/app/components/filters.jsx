@@ -52,12 +52,6 @@ export default function Filters({ filterValues, filterSetters }) {
           />
         </div>
       </div>
-
-      <div className="d-flex">
-        <button className="btn btn-success m-2">
-          <span className="fw-bold">download</span>
-        </button>
-      </div>
     </div>
   );
 }

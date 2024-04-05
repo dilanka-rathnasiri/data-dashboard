@@ -3,7 +3,7 @@ import getTableData from "@/app/services/data-services";
 import Filters from "@/app/components/filters";
 import { useState } from "react";
 
-export function DataView({ data }) {
+export function DataView({ tableData }) {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
@@ -23,11 +23,15 @@ export function DataView({ data }) {
     setBirthdate: setBirthdate,
     setEmail: setEmail,
   };
-  const { headers, rows } = getTableData(data, filterValues);
+  const { headers, rows } = getTableData(tableData, filterValues);
 
   return (
     <div>
-      <Filters filterValues={filterValues} filterSetters={filterSetters} />
+      <Filters
+        filterValues={filterValues}
+        filterSetters={filterSetters}
+        tableData={tableData}
+      />
       <table className="table table-bordered border-secondary">
         <thead>
           <tr className="table-success">

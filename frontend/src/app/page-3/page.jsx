@@ -4,7 +4,7 @@ import getData from "@/app/resources/data-3";
 export default function Page() {
   return (
     <div>
-      <DataView data={getData()} />
+      <DataView tableData={getData()} />
     </div>
   );
 }
