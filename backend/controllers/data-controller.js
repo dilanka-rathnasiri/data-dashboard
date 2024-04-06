@@ -1,21 +1,33 @@
+const loadData = require("../utils/file-utils");
+
 const homeDataController = (req, res) => {
-  res.send("Home data");
+  loadData("data-home")
+    .then((data) => res.send(data))
+    .catch((err) => res.send(err));
 };
 
 const data1Controller = (req, res) => {
-  res.send("Data 1");
+  loadData("data-1")
+    .then((data) => res.send(data))
+    .catch((err) => res.send(err));
 };
 
 const data2Controller = (req, res) => {
-  res.send("Data 2");
+  loadData("data-2")
+    .then((data) => res.send(data))
+    .catch((err) => res.send(err));
 };
 
 const data3Controller = (req, res) => {
-  res.send("Data 3");
+  loadData("data-3")
+    .then((data) => res.send(data))
+    .catch((err) => res.send(err));
 };
 
 const data4Controller = (req, res) => {
-  res.send("Data 4");
+  loadData("data-4")
+    .then((data) => res.send(data))
+    .catch((err) => res.send(err));
 };
 
 module.exports = {
