@@ -4,7 +4,7 @@ import { DataView } from "@/app/components/data-view";
 export default function Home() {
   return (
     <main>
-      <DataView data={getData()} />
+      <DataView tableData={getData()} />
     </main>
   );
 }
