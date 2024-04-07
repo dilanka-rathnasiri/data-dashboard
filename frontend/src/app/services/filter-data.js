@@ -1,4 +1,5 @@
 import { Row } from "@/app/models/row";
+import { compareText } from "@/app/utils/text";
 
 export default function filterData(data, filter) {
   const headers = Object.keys(data[0]);
@@ -10,11 +11,11 @@ export default function filterData(data, filter) {
 
   for (let i = 0; i < values.length; i++) {
     if (
-      values[i].id.startsWith(filter.id) &&
-      values[i].name.startsWith(filter.name) &&
-      values[i].address.startsWith(filter.address) &&
-      values[i].birthdate.startsWith(filter.birthdate) &&
-      values[i].email.startsWith(filter.email)
+      compareText(values[i].id, filter.id) &&
+      compareText(values[i].name, filter.name) &&
+      compareText(values[i].address, filter.address) &&
+      compareText(values[i].birthdate, filter.birthdate) &&
+      compareText(values[i].email, filter.email)
     ) {
       rows.push(Object.values(values[i]));
     }
