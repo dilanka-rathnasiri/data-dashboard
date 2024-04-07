@@ -1,9 +1,9 @@
 "use client";
-import getTableData from "@/app/services/data-services";
 import Filters from "@/app/components/filters";
 import { useState } from "react";
+import filterData from "@/app/services/filter-data";
 
-export function DataView({ tableData }) {
+export function DataView({ data }) {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
@@ -23,15 +23,12 @@ export function DataView({ tableData }) {
     setBirthdate: setBirthdate,
     setEmail: setEmail,
   };
-  const { headers, rows } = getTableData(tableData, filterValues);
+
+  const { headers, rows } = filterData(data, filterValues);
 
   return (
     <div>
-      <Filters
-        filterValues={filterValues}
-        filterSetters={filterSetters}
-        tableData={tableData}
-      />
+      <Filters filterValues={filterValues} filterSetters={filterSetters} />
       <table className="table table-bordered border-secondary">
         <thead>
           <tr className="table-success">

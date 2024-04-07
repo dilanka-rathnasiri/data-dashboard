@@ -1,10 +1,12 @@
-import getData from "@/app/resources/data-home";
 import { DataView } from "@/app/components/data-view";
+import getData from "@/app/services/get-data";
 
-export default function Home() {
+export default async function Home() {
+  const data = await getData("home");
+
   return (
     <main>
-      <DataView tableData={getData()} />
+      <DataView data={data} />
     </main>
   );
 }

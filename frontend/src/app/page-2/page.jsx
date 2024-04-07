@@ -1,10 +1,12 @@
 import { DataView } from "@/app/components/data-view";
-import getData from "@/app/resources/data-2";
+import getData from "@/app/services/get-data";
 
-export default function Page() {
+export default async function Page() {
+  const data = await getData("2");
+
   return (
     <div>
-      <DataView tableData={getData()} />
+      <DataView data={data} />
     </div>
   );
 }
