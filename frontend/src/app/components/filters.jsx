@@ -1,4 +1,16 @@
-export default function Filters({ filterValues, filterSetters }) {
+import { createCSV, downloadCSV } from "@/app/services/csv";
+
+export default function Filters({
+  filterValues,
+  filterSetters,
+  headers,
+  rows,
+}) {
+  const download = async () => {
+    const csvContent = createCSV(headers, rows);
+    downloadCSV(csvContent, "data.csv");
+  };
+
   return (
     <div className="d-flex flex-row m-2">
       <div className="d-flex flex-grow-1 justify-content-start">
@@ -51,6 +63,14 @@ export default function Filters({ filterValues, filterSetters }) {
             onChange={(e) => filterSetters.setEmail(e.target.value)}
           />
         </div>
+
+        <button
+          type="button"
+          className="btn btn-success"
+          onClick={() => download()}
+        >
+          download
+        </button>
       </div>
     </div>
   );

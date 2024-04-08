@@ -61,7 +61,12 @@ export function DataView({ path }) {
   } else {
     return (
       <div>
-        <Filters filterValues={filterValues} filterSetters={filterSetters} />
+        <Filters
+          filterValues={filterValues}
+          filterSetters={filterSetters}
+          headers={headers}
+          rows={rows}
+        />
         <table className="table table-bordered border-secondary">
           <thead>
             <tr className="table-success">
