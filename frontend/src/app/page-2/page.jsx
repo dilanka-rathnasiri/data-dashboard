@@ -1,9 +1,9 @@
-import { DataView } from "@/app/components/data-view";
+import DashboardContainer from "@/app/components/dashboard-container";
 
 export default function Page() {
   return (
     <div>
-      <DataView path="2" />
+      <DashboardContainer path="2" />
     </div>
   );
 }

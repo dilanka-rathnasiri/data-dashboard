@@ -1,4 +1,5 @@
-import { createCSV, downloadCSV } from "@/app/services/csv";
+// import { createCSV } from "@/app/services/csv";
+// import { sleep } from "@/app/utils/thread";
 
 export default function Filters({
   filterValues,
@@ -6,10 +7,10 @@ export default function Filters({
   headers,
   rows,
 }) {
-  const download = async () => {
-    const csvContent = createCSV(headers, rows);
-    downloadCSV(csvContent, "data.csv");
-  };
+  // const download = async () => {
+  //   const csvContent = createCSV(headers, rows);
+  //   downloadCSV(csvContent, "data.csv");
+  // };
 
   return (
     <div className="d-flex flex-row m-2">
@@ -64,13 +65,13 @@ export default function Filters({
           />
         </div>
 
-        <button
-          type="button"
-          className="btn btn-success"
-          onClick={() => download()}
-        >
-          download
-        </button>
+        {/*<button*/}
+        {/*  type="button"*/}
+        {/*  className="btn btn-success"*/}
+        {/*  onClick={() => download()}*/}
+        {/*>*/}
+        {/*  download*/}
+        {/*</button>*/}
       </div>
     </div>
   );
