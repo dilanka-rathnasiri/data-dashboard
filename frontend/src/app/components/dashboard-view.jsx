@@ -11,6 +11,8 @@ export default function DashboardView({ tableData }) {
   const [address, setAddress] = useState("");
   const [birthdate, setBirthdate] = useState("");
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [csvDownloading, setCsvDownloading] = useState(false);
 
   const [headers, setHeaders] = useState({});
   const [rows, setRows] = useState({});
@@ -28,10 +30,13 @@ export default function DashboardView({ tableData }) {
       const filteredData = filterData(tableData, filters);
       setHeaders(filteredData.headers);
       setRows(filteredData.rows);
+      setLoading(false);
     }
   }, [tableData, id, name, address, birthdate, email]);
 
-  if (rows.length > 0) {
+  if (loading || csvDownloading) {
+    return <LoadingSpinner />;
+  } else {
     const filterValues = {
       id: id,
       name: name,
@@ -55,11 +60,10 @@ export default function DashboardView({ tableData }) {
           filterSetters={filterSetters}
           rows={rows}
           headers={headers}
+          setCsvDownloading={setCsvDownloading}
         />
         <Table headers={headers} rows={rows} />
       </div>
     );
-  } else {
-    return <LoadingSpinner />;
   }
 }
