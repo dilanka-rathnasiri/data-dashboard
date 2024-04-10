@@ -3,21 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// import { useRouter } from "next/router";
-
-function activeStyle(path, id) {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  // const router = useRouter();
-
-  if (id === path) {
-    return "btn-dark";
-  } else {
-    return "";
-  }
-}
-
-export default function NavBar({ param }) {
+export default function NavBar() {
   const ids = Array.from({ length: 4 }, (_, i) => i + 1);
   const paths = ids.map((id) => `/${id}`);
   const pathname = usePathname();
