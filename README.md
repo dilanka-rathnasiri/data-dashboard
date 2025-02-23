@@ -3,8 +3,8 @@ This is a simple sample data dashboard for displaying tabular data.
 
 - Frontend developed with Next.js
 - Backend developed with Express.js
-- frontend can be up with `next dev`
-- backend can be up with `node app.js`
+- frontend can be up with `next run dev`
+- backend can be up with `npm start`
 
 <span style="color:red">This is just a fun project. Do not use in production.</span>
 
