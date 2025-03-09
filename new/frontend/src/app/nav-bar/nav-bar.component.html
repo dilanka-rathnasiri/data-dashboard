@@ -1,0 +1,6 @@
+<mat-toolbar>
+    @for (item of navItems; track item.label){
+        <a mat-flat-button class="nav-bar-item" [routerLink]="item.path" [disabled]="isDisabled(item.path)">{{ item.label }}</a>
+    }
+</mat-toolbar>
+
