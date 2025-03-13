@@ -8,5 +8,4 @@ import {NavBarComponent} from "./nav-bar/nav-bar.component";
     templateUrl: './app.component.html'
 })
 export class AppComponent {
-    title = 'Data dashboard';
 }

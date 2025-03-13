@@ -1,5 +1,5 @@
 export interface Person {
-    n: number,
+    n: string,
     id: string,
     name: string,
     address: string,
