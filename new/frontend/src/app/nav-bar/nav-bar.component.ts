@@ -1,28 +1,31 @@
 import {Component} from '@angular/core';
-import {MatAnchor} from "@angular/material/button";
-import {MatToolbar} from "@angular/material/toolbar";
-import {RouterLink, Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {NavBarItem} from "../models/navBarItem";
 
 @Component({
     selector: 'app-nav-bar',
     imports: [
-        MatToolbar,
-        MatAnchor,
         RouterLink
     ],
-    templateUrl: './nav-bar.component.html',
-    styleUrls: ['./nav-bar.component.scss']
+    templateUrl: './nav-bar.component.html'
 })
 export class NavBarComponent {
-    constructor(private router: Router) {}
-
     navItems: NavBarItem[] = [
         {label: 'Home', path: ''},
-        {label: 'Page1', path: 'page-1'}
+        {label: 'Page 1', path: 'page-1'}
     ];
+
+    constructor(private router: Router) {
+    }
 
     isDisabled(path: string): boolean {
         return `/${path}` === this.router.url;
+    }
+
+    getNavStyle(path: string): string {
+        if (`/${path}` === this.router.url) {
+            return "nav-link active fw-bolder text-success-emphasis";
+        }
+        return "nav-link";
     }
 }

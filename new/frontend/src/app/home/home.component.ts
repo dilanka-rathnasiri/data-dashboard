@@ -1,22 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import {DataService} from "../services/data.service";
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  imports: [],
-  templateUrl: './home.component.html'
+    selector: 'app-home',
+    imports: [],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+export class HomeComponent {
 
-  ngOnInit() {
-    this.dataService.getData("home").subscribe({
-      next: data => {
-        console.log(data);
-      },
-      error: error => {
-        console.log(error);
-      }
-    })
-  }
 }
