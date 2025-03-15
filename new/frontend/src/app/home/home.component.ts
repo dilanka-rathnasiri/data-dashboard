@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataViewComponent} from "../data-view/data-view.component";
-import {mockData} from "../data/mockData";
+import {DataService} from "../services/data.service";
+import {Person} from "../models/person";
 
 @Component({
     selector: 'app-home',
@@ -9,6 +10,15 @@ import {mockData} from "../data/mockData";
     ],
     templateUrl: './home.component.html'
 })
-export class HomeComponent {
-    protected readonly mockData = mockData;
+export class HomeComponent implements OnInit{
+    data!: Person[];
+
+    constructor(private dataService: DataService) {
+    }
+
+    ngOnInit() {
+        this.dataService.callBackendApi("home").subscribe((value: Person[]) => {
+            this.data = value;
+        });
+    }
 }
