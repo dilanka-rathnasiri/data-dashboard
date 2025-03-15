@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {delay, Observable} from "rxjs";
 import {Person} from "../models/person";
 
 @Injectable({
@@ -12,6 +12,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   callBackendApi(id: string): Observable<Person[]> {
-    return this.http.get<Person[]>(`${this.basePath}/data/${id}`);
+    return this.http.get<Person[]>(`${this.basePath}/data/${id}`).pipe(delay(5000));
   }
 }

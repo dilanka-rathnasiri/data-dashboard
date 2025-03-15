@@ -1,0 +1,9 @@
+@import "bootstrap";
+
+#custom_spinner {
+    @extend .spinner-border;
+    @extend .text-success;
+    @extend .h1;
+    width: 10rem;
+    height: 10rem;
+}
