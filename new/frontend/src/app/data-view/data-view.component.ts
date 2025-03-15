@@ -1,11 +1,15 @@
 import {Component, Input} from '@angular/core';
 import {Person} from "../models/person";
+import {Observable} from "rxjs";
+import {AsyncPipe} from "@angular/common";
 
 @Component({
     selector: 'app-data-view',
-    imports: [],
+    imports: [
+        AsyncPipe
+    ],
     templateUrl: './data-view.component.html'
 })
 export class DataViewComponent {
-    @Input() data: Person[] = [];
+    @Input() data$!: Observable<Person[]>;
 }
