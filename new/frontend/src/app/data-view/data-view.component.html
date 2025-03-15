@@ -1,30 +1,24 @@
-@if (data$ | async; as data) {
-    <table class="table table-bordered">
-        <thead>
-        <tr class="table-success">
-            <th scope="col">n</th>
-            <th scope="col">id</th>
-            <th scope="col">name</th>
-            <th scope="col">address</th>
-            <th scope="col">birthDate</th>
-            <th scope="col">email</th>
-        </tr>
-        </thead>
-        <tbody>
-            @for (person of data; track person.id) {
-                <tr>
-                    <th scope="row">{{ person.n }}</th>
-                    <td>{{ person.id }}</td>
-                    <td>{{ person.name }}</td>
-                    <td>{{ person.address }}</td>
-                    <td>{{ person.birthDate }}</td>
-                    <td>{{ person.email }}</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-} @else {
-    <div class="alert alert-danger m-3 h5" role="alert">
-        Error in loading data!
-    </div>
-}
+<table class="table table-bordered">
+    <thead>
+    <tr class="table-success">
+        <th scope="col">n</th>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">address</th>
+        <th scope="col">birthDate</th>
+        <th scope="col">email</th>
+    </tr>
+    </thead>
+    <tbody>
+        @for (person of data; track person.id) {
+            <tr>
+                <th scope="row">{{ person.n }}</th>
+                <td>{{ person.id }}</td>
+                <td>{{ person.name }}</td>
+                <td>{{ person.address }}</td>
+                <td>{{ person.birthDate }}</td>
+                <td>{{ person.email }}</td>
+            </tr>
+        }
+    </tbody>
+</table>
