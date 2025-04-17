@@ -5,6 +5,14 @@
 } @else {
     <table class="table table-bordered">
         <thead>
+            <tr>
+                <th><input type="text" [(ngModel)]="filters.n" (input)="applyFilters()" placeholder="Filter n"></th>
+                <th><input type="text" [(ngModel)]="filters.id" (input)="applyFilters()" placeholder="Filter id"></th>
+                <th><input type="text" [(ngModel)]="filters.name" (input)="applyFilters()" placeholder="Filter name"></th>
+                <th><input type="text" [(ngModel)]="filters.address" (input)="applyFilters()" placeholder="Filter address"></th>
+                <th><input type="text" [(ngModel)]="filters.birthDate" (input)="applyFilters()" placeholder="Filter birthDate"></th>
+                <th><input type="text" [(ngModel)]="filters.email" (input)="applyFilters()" placeholder="Filter email"></th>
+            </tr>
             <tr class="table-success">
                 <th scope="col">n</th>
                 <th scope="col">id</th>
@@ -15,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            @for (person of data; track person.id) {
+            @for (person of filteredData; track person.id) {
                 <tr>
                     <th scope="row">{{ person.n }}</th>
                     <td>{{ person.id }}</td>
