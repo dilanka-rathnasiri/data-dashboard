@@ -3,16 +3,38 @@
 } @else if (errorMessage != null) {
     <app-error-banner [errorMessage]="this.errorMessage"/>
 } @else {
+    <div class="card card-body m-2">
+        <div class="d-inline-flex gap-1">
+            <a
+              class="btn" 
+              [class.btn-success]="isQuickFiltersOpen"
+              [class.btn-outline-success]="!isQuickFiltersOpen"
+              data-bs-toggle="collapse" 
+              href="#collapseQuickFilters" 
+              role="button" 
+              [attr.aria-expanded]="isQuickFiltersOpen"
+              aria-controls="collapseExample"
+              (click)="isQuickFiltersOpen = !isQuickFiltersOpen"
+            >
+              Quick Filters
+            </a>
+        </div>
+        <div class="collapse" id="collapseQuickFilters">
+            <div class="card card-body mt-2">
+                <div class="d-inline-flex gap-2 justify-content-evenly">
+                    <input class="flex-fill form-control" type="text" [(ngModel)]="filters.n" (input)="applyFilters()" placeholder="Filter n">
+                    <input class="flex-fill form-control" type="text" [(ngModel)]="filters.id" (input)="applyFilters()" placeholder="Filter id">
+                    <input class="flex-fill form-control" type="text" [(ngModel)]="filters.name" (input)="applyFilters()" placeholder="Filter name">
+                    <input class="flex-fill form-control" type="text" [(ngModel)]="filters.address" (input)="applyFilters()" placeholder="Filter address">
+                    <input class="flex-fill form-control" type="text" [(ngModel)]="filters.birthDate" (input)="applyFilters()" placeholder="Filter birthDate">
+                    <input class="flex-fill form-control" type="text" [(ngModel)]="filters.email" (input)="applyFilters()" placeholder="Filter email">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <table class="table table-bordered">
         <thead>
-            <tr>
-                <th><input type="text" [(ngModel)]="filters.n" (input)="applyFilters()" placeholder="Filter n"></th>
-                <th><input type="text" [(ngModel)]="filters.id" (input)="applyFilters()" placeholder="Filter id"></th>
-                <th><input type="text" [(ngModel)]="filters.name" (input)="applyFilters()" placeholder="Filter name"></th>
-                <th><input type="text" [(ngModel)]="filters.address" (input)="applyFilters()" placeholder="Filter address"></th>
-                <th><input type="text" [(ngModel)]="filters.birthDate" (input)="applyFilters()" placeholder="Filter birthDate"></th>
-                <th><input type="text" [(ngModel)]="filters.email" (input)="applyFilters()" placeholder="Filter email"></th>
-            </tr>
             <tr class="table-success">
                 <th scope="col">n</th>
                 <th scope="col">id</th>

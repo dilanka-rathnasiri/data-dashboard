@@ -12,6 +12,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   callBackendApi(id: string): Observable<Person[]> {
-    return this.http.get<Person[]>(`${this.basePath}/data/${id}`).pipe(delay(5000));
+    return this.http.get<Person[]>(`${this.basePath}/data/${id}`);
   }
 }

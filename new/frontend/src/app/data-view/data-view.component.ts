@@ -20,6 +20,7 @@ export class DataViewComponent implements OnInit {
     filteredData: Person[] = [];
     isLoading: boolean = true;
     errorMessage!: string;
+    isQuickFiltersOpen = false;
 
     filters = {
         n: '',
