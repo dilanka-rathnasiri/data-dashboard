@@ -1,6 +1,6 @@
-import express from "express";
-import cors from "cors";
-import {router} from "./routes/data-routes";
+import express from 'express';
+import cors from 'cors';
+import { router } from './routes/data-routes';
 
 const port: number = 5000;
 const app = express();
@@ -11,4 +11,4 @@ app.listen(port, () => {
     console.log(`App listening on port ${port}`);
 });
 
-app.use("/data", router);
+app.use('/data', router);

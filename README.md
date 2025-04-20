@@ -1,4 +1,5 @@
 # Data Dashboard
+
 This is a simple sample data dashboard for displaying tabular data.
 
 - Frontend developed with Next.js
