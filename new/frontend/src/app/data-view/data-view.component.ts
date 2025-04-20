@@ -3,11 +3,12 @@ import { Person } from '../models/person';
 import { DataService } from '../services/data.service';
 import { SpinnerComponent } from '../spinner/spinner.component';
 import { ErrorBannerComponent } from '../error-banner/error-banner.component';
-import { FormsModule } from '@angular/forms';
+import { QuickFiltersComponent } from '../quick-filters/quick-filters.component';
 
 @Component({
     selector: 'app-data-view',
-    imports: [SpinnerComponent, ErrorBannerComponent, FormsModule],
+    standalone: true,
+    imports: [SpinnerComponent, ErrorBannerComponent, QuickFiltersComponent],
     templateUrl: './data-view.component.html',
 })
 export class DataViewComponent implements OnInit {
@@ -16,16 +17,6 @@ export class DataViewComponent implements OnInit {
     filteredData: Person[] = [];
     isLoading: boolean = true;
     errorMessage!: string;
-    isQuickFiltersOpen = false;
-
-    filters = {
-        n: '',
-        id: '',
-        name: '',
-        address: '',
-        birthDate: '',
-        email: '',
-    };
 
     constructor(private dataService: DataService) {}
 
@@ -44,13 +35,7 @@ export class DataViewComponent implements OnInit {
         });
     }
 
-    applyFilters() {
-        this.filteredData = this.data.filter((person) => {
-            return Object.keys(this.filters).every((key) => {
-                const filterValue = this.filters[key as keyof Person].toLowerCase();
-                const personValue = (person[key as keyof Person] || '').toString().toLowerCase();
-                return personValue.includes(filterValue);
-            });
-        });
+    onFilteredDataChange(filteredData: Person[]) {
+        this.filteredData = filteredData;
     }
 }

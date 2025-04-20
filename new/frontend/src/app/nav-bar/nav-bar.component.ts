@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { NavBarItem } from '../models/navBarItem';
+import { QuickFiltersComponent } from '../quick-filters/quick-filters.component';
 
 @Component({
     selector: 'app-nav-bar',
+    standalone: true,
     imports: [RouterLink],
     templateUrl: './nav-bar.component.html',
 })
@@ -12,6 +14,8 @@ export class NavBarComponent {
         { label: 'Home', path: '' },
         { label: 'Page 1', path: 'page-1' },
     ];
+
+    isQuickFiltersOpen = false;
 
     constructor(private router: Router) {}
 
@@ -24,5 +28,9 @@ export class NavBarComponent {
             return 'nav-link active fw-bolder text-success-emphasis';
         }
         return 'nav-link';
+    }
+
+    toggleQuickFilters() {
+        this.isQuickFiltersOpen = !this.isQuickFiltersOpen;
     }
 }

@@ -8,11 +8,28 @@
                             aria-current="page"
                             [class]="getNavStyle(item.path)"
                             [routerLink]="item.path"
+                            [attr.disabled]="isDisabled(item.path) ? true : null"
+                            [style.pointer-events]="isDisabled(item.path) ? 'none' : 'auto'"
                             >{{ item.label }}</a
                         >
                     </li>
                 }
             </ul>
+            <div class="ms-auto">
+                <a
+                    class="btn"
+                    [class.btn-success]="isQuickFiltersOpen"
+                    [class.btn-outline-success]="!isQuickFiltersOpen"
+                    data-bs-toggle="collapse"
+                    href="#collapseQuickFilters"
+                    role="button"
+                    [attr.aria-expanded]="isQuickFiltersOpen"
+                    aria-controls="collapseQuickFilters"
+                    (click)="toggleQuickFilters()"
+                >
+                    Quick Filters
+                </a>
+            </div>
         </div>
     </div>
 </nav>
