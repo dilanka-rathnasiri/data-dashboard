@@ -13,6 +13,9 @@ export class NavBarComponent {
     navItems: NavBarItem[] = [
         { label: 'Home', path: '' },
         { label: 'Page 1', path: 'page-1' },
+        { label: 'Page 2', path: 'page-2' },
+        { label: 'Page 3', path: 'page-3' },
+        { label: 'Page 4', path: 'page-4' },
     ];
 
     isQuickFiltersOpen = false;

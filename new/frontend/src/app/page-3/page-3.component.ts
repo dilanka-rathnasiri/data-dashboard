@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { DataViewComponent } from '../data-view/data-view.component';
 
 @Component({
-    selector: 'app-page-1',
+    selector: 'app-page-3',
     imports: [DataViewComponent],
-    templateUrl: './page-1.component.html',
+    templateUrl: './page-3.component.html',
 })
-export class Page1Component {}
+export class Page3Component {}
