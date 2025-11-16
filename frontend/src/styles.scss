@@ -1,6 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use 'bootstrap/scss/bootstrap';
+
 html,
 body {
     height: 100%;
+}
+
+.custom-spinner {
+    @extend .spinner-border;
+    @extend .text-success;
+    @extend .h1;
+    width: 10rem;
+    height: 10rem;
+}
+
+.custom-spinner {
+    @extend .spinner-border;
+    @extend .text-success;
+    @extend .h1;
+    width: 10rem;
+    height: 10rem;
 }

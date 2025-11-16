@@ -20,21 +20,25 @@ educational and development purposes.
 # frontend
 cd frontend
 npm install
-ng serve
+npm start
 
 #backend
 cd ../backend
 npm install
-npm start
+npm run dev
   ```
 
 ## How to Build the Project
 
 ```bash
+# frontend
 cd frontend
 npm install
 ng build --prod
+
+# backend
 cd ../backend
+npm run build
 npm install
 ```
 
