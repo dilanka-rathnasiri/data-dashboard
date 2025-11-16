@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, input, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Person } from '../models/person';
 
@@ -9,7 +9,7 @@ import { Person } from '../models/person';
     templateUrl: './quick-filters.component.html',
 })
 export class QuickFiltersComponent {
-    @Input() data: Person[] = [];
+    data = input<Person[]>([]);
     @Output() filteredDataChange = new EventEmitter<Person[]>();
 
     filters = {
@@ -22,7 +22,7 @@ export class QuickFiltersComponent {
     };
 
     applyFilters() {
-        const filteredData = this.data.filter((person) => {
+        const filteredData = this.data().filter((person) => {
             return Object.keys(this.filters).every((key) => {
                 const filterValue = this.filters[key as keyof Person].toLowerCase();
                 const personValue = (person[key as keyof Person] || '').toString().toLowerCase();

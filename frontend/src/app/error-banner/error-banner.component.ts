@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
     selector: 'app-error-banner',
@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
     templateUrl: './error-banner.component.html',
 })
 export class ErrorBannerComponent {
-    @Input() errorMessage: string = '';
+    errorMessage = input<string>('');
 }

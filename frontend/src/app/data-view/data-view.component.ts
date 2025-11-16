@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
 import { Person } from '../models/person';
 import { DataService } from '../services/data.service';
 import { SpinnerComponent } from '../spinner/spinner.component';
@@ -12,7 +12,7 @@ import { QuickFiltersComponent } from '../quick-filters/quick-filters.component'
     templateUrl: './data-view.component.html',
 })
 export class DataViewComponent implements OnInit {
-    @Input() urlId: string = 'home';
+    urlId = input<string>('home');
     data: Person[] = [];
     filteredData: Person[] = [];
     isLoading: boolean = true;
@@ -21,7 +21,7 @@ export class DataViewComponent implements OnInit {
     constructor(private dataService: DataService) {}
 
     ngOnInit() {
-        this.dataService.callBackendApi(this.urlId).subscribe({
+        this.dataService.callBackendApi(this.urlId()).subscribe({
             next: (data) => {
                 this.data = data;
                 this.filteredData = data;

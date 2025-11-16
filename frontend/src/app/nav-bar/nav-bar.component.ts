@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { NavBarItem } from '../models/navBarItem';
-import { QuickFiltersComponent } from '../quick-filters/quick-filters.component';
 
 @Component({
     selector: 'app-nav-bar',
